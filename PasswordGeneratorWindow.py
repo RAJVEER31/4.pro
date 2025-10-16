@@ -17,19 +17,19 @@ class PasswordGeneratorWindow:
         self.entry_length.pack(pady=5)
 
         self.var_uppercase = IntVar()
-        self.check_uppercase = Checkbutton(master, text="Include Uppercase Letters", variable=self.var_uppercase)
+        self.check_uppercase = Checkbutton(master, bg='lightblue', text="Include Uppercase Letters", variable=self.var_uppercase)
         self.check_uppercase.pack()
 
         self.var_lowercase = IntVar()
-        self.check_lowercase = Checkbutton(master, text="Include Lowercase Letters", variable=self.var_lowercase)
+        self.check_lowercase = Checkbutton(master, bg='lightblue', text="Include Lowercase Letters", variable=self.var_lowercase)
         self.check_lowercase.pack()
 
         self.var_digits = IntVar()
-        self.check_digits = Checkbutton(master, text="Include Digits", variable=self.var_digits)
+        self.check_digits = Checkbutton(master, bg='lightblue', text="Include Digits", variable=self.var_digits)
         self.check_digits.pack()
 
         self.var_special = IntVar()
-        self.check_special = Checkbutton(master, text="Include Special Characters", variable=self.var_special)
+        self.check_special = Checkbutton(master, bg='lightblue', text="Include Special Characters", variable=self.var_special)
         self.check_special.pack()
 
         self.button_generate = Button(master, text="Generate Password", command=self.generate_password)
@@ -90,5 +90,6 @@ class PasswordGeneratorWindow:
 if __name__ == "__main__":
     root = Tk()
     app = PasswordGeneratorWindow(root)
+    root.configure(bg='lightblue')
     root.mainloop()
 
